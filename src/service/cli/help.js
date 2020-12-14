@@ -6,7 +6,7 @@ module.exports = {
     const text = `
     Программа запускает http-сервер и формирует файл с данными для api.
     Гайд:
-      server <command>
+      node ./src/service/service.js <command>
       Команды:
       --version:            выводит номер версии
       --help:               печатает этот текст
