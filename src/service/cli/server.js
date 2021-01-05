@@ -6,7 +6,7 @@ const fs = require(`fs`).promises;
 
 const DEFAULT_PORT = 3000;
 const FILENAME = `mocks.json`;
-const { HttpCode } = require(`../../constants`);
+const {HttpCode} = require(`../../constants`);
 
 const sendResponse = (res, statusCode, message) => {
   const template = `
@@ -63,4 +63,4 @@ module.exports = {
         return console.info(chalk.green(`Ожидаю соединений на ${port}`));
       });
   }
-}
+};
