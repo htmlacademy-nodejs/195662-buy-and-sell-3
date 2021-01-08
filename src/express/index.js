@@ -1,9 +1,9 @@
 'use strict';
 
-const express = require('express');
-const mainRoutes = require('./routes/main-routes');
-const myRoutes = require('./routes/my-routes');
-const offersRoutes = require('./routes/offers-routes');
+const express = require(`express`);
+const mainRoutes = require(`./routes/main-routes`);
+const myRoutes = require(`./routes/my-routes`);
+const offersRoutes = require(`./routes/offers-routes`);
 const DEFAULT_PORT = 8080;
 
 const app = express();
