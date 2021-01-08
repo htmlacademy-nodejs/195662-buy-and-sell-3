@@ -17,3 +17,6 @@ app.use(`/`, mainRoutes);
 app.use(express.static(path.resolve(__dirname, PUBLIC_DIR)));
 
 app.listen(DEFAULT_PORT);
+
+app.set(`views`, path.resolve(__dirname, `templates`));
+app.set(`view engine`, `pug`);
