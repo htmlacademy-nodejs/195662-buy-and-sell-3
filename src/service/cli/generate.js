@@ -3,6 +3,8 @@
 const fs = require(`fs`).promises;
 const chalk = require(`chalk`);
 const {getRandomInt, shuffle} = require(`../../utils`);
+const {nanoid} = require(`nanoid`);
+const {MAX_ID_LENGTH} = require(`../../constants`);
 
 const DEFAULT_COUNT = 1;
 const FILE_NAME = `mocks.json`;
@@ -37,6 +39,7 @@ const readContent = async (filePath) => {
 const getPictureFileName = (number) => number > 10 ? `item${number}.jpg` : `item0${number}.jpg`;
 const generateOffers = (count, titles, categories, sentences) => (
   Array(count).fill({}).map(() => ({
+    id: nanoid(MAX_ID_LENGTH),
     category: [categories[getRandomInt(0, categories.length - 1)]],
     description: shuffle(sentences).slice(1, 5).join(` `),
     picture: getPictureFileName(getRandomInt(PictureRestrict.MIN, PictureRestrict.MAX)),
