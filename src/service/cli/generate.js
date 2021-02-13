@@ -4,9 +4,10 @@ const fs = require(`fs`).promises;
 const chalk = require(`chalk`);
 const {getRandomInt, shuffle} = require(`../../utils`);
 const {nanoid} = require(`nanoid`);
-const {MAX_ID_LENGTH, MAX_COMMENTS} = require(`../../constants`);
+const {MAX_ID_LENGTH} = require(`../../constants`);
 
 const DEFAULT_COUNT = 1;
+const MAX_COMMENTS = 4;
 const FILE_NAME = `mocks.json`;
 
 const FILE_SENTENCES_PATH = `./data/sentences.txt`;
