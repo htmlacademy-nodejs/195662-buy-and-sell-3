@@ -3,7 +3,7 @@
 const express = require(`express`);
 const chalk = require(`chalk`);
 const {HttpCode, API_PREFIX} = require(`../../constants`);
-const routes = require(`api`);
+const routes = require(`../api`);
 const getMockData = require(`../lib/get-mock-data`);
 
 const DEFAULT_PORT = 3000;
