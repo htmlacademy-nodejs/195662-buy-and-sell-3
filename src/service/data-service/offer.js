@@ -1,4 +1,4 @@
-`use strict`;
+'use strict';
 
 const {nanoid} = require(`nanoid`);
 const {MAX_ID_LENGTH} = require(`../../constants`);
