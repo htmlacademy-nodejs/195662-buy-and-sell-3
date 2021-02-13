@@ -4,7 +4,7 @@ const fs = require(`fs`).promises;
 const FILENAME = `mocks.json`;
 let data = null;
 
-const getMockData  = async () => {
+const getMockData = async () => {
   if (data !== null) {
     return Promise.resolve(data);
   }
