@@ -24,8 +24,8 @@ const SumRestrict = {
   MAX: 100000,
 };
 const PictureRestrict = {
-  min: 1,
-  max: 16,
+  MIN: 1,
+  MAX: 16,
 };
 
 const readContent = async (filePath) => {
