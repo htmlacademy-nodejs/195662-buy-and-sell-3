@@ -145,13 +145,12 @@ describe(`API return category list`, () => {
   let response;
 
   beforeAll(async () => {
-    response = await request(app)
-      .get(`/categories`);
+    response = await request(app).get(`/categories`);
   });
 
   test(`Status code 200`, () => expect(response.statusCode).toBe(HttpCode.OK));
 
-  test(`Returns list of 3 categories`, () => expect(response.body.length).toBe(4));
+  test(`Returns list of 4 categories`, () => expect(response.body.length).toBe(4));
 
   test(`Category names are "Инструменты", "Животные", "Игры", "Журналы"`,
       () => expect(response.body).toEqual(

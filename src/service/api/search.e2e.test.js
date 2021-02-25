@@ -146,11 +146,9 @@ describe(`API returns offer based on search query`, () => {
   let response;
 
   beforeAll(async () => {
-    response = await request(app)
-      .get(`/search`)
-      .query({
-        query: `Продам отличную подборку`
-      });
+    response = await request(app).get(`/search`).query({
+      query: `Продам отличную подборку`
+    });
   });
 
   test(`Status code 200`, () => expect(response.statusCode).toBe(HttpCode.OK));
