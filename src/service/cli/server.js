@@ -1,7 +1,6 @@
 'use strict';
 
 const express = require(`express`);
-const chalk = require(`chalk`);
 const {HttpCode, API_PREFIX} = require(`../../constants`);
 const routes = require(`../api`);
 const {getLogger} = require(`../lib/logger`);
