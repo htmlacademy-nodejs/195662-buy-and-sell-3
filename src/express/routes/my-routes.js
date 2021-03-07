@@ -9,6 +9,9 @@ myRouter.get(`/`, async (req, res) => {
   const suggestions = await api.getOffers();
   res.render(`my-tickets`, {suggestions});
 });
-myRouter.get(`/comments`, (req, res) => res.render(`comments`));
+myRouter.get(`/comments`, async (req, res) => {
+  const suggestions = await api.getOffers();
+  res.render(`comments`, {suggestions: suggestions.slice(0, 3)});
+});
 
 module.exports = myRouter;
