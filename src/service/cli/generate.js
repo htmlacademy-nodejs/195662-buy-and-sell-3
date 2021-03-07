@@ -38,7 +38,7 @@ const readContent = async (filePath) => {
   }
 };
 
-const getPictureFileName = (number) => number > 10 ? `item${number}.jpg` : `item0${number}.jpg`;
+const getPictureFileName = (number) => number > 9 ? `item${number}.jpg` : `item0${number}.jpg`;
 const generateComments = (count, comments) => (
   Array(count).fill({}).map(() => ({
     id: nanoid(MAX_ID_LENGTH),
