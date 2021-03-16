@@ -24,8 +24,8 @@ const SumRestrict = {
   MAX: 100000,
 };
 const PictureRestrict = {
-  min: 1,
-  max: 16,
+  MIN: 1,
+  MAX: 16,
 };
 
 const readContent = async (filePath) => {
@@ -38,7 +38,7 @@ const readContent = async (filePath) => {
   }
 };
 
-const getPictureFileName = (number) => number > 10 ? `item${number}.jpg` : `item0${number}.jpg`;
+const getPictureFileName = (number) => number > 9 ? `item${number}.jpg` : `item0${number}.jpg`;
 const generateComments = (count, comments) => (
   Array(count).fill({}).map(() => ({
     id: nanoid(MAX_ID_LENGTH),
@@ -57,7 +57,6 @@ const generateOffers = (count, titles, categories, sentences, comments) => (
     type: Object.keys(OfferType)[Math.floor(Math.random() * Object.keys(OfferType).length)],
     sum: getRandomInt(SumRestrict.MIN, SumRestrict.MAX),
     comments: generateComments(getRandomInt(1, MAX_COMMENTS), comments),
-    tost: 123,
   }))
 );
 

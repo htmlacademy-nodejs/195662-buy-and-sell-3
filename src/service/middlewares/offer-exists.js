@@ -7,8 +7,7 @@ module.exports = (service) => (req, res, next) => {
   const offer = service.findOne(offerId);
 
   if (!offer) {
-    return res.status(HttpCode.NOT_FOUND)
-      .send(`Offer with ${offerId} not found`);
+    return res.status(HttpCode.NOT_FOUND).send(`Offer with ${offerId} not found`);
   }
 
   res.locals.offer = offer;
